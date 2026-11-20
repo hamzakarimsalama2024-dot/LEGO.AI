@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#5b43c6">
+  <title>LEGO AI | مهندس الليجو الذكي</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand"><span class="brick">▦</span><div><b>LEGO AI</b><small>مهندس الليجو الذكي</small></div></div>
+    <span id="status" class="status">جاري فحص الاتصال...</span>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">ابنِها خطوة بخطوة</span>
+        <h1>فكرتك تتحول إلى<br><em>مجسم ليجو!</em></h1>
+        <p>اختار حجم مشروعك، والذكاء الاصطناعي هيساعدك في كل خطوة.</p>
+      </div>
+      <div class="hero-art" aria-hidden="true"><span>🧱</span><span>🧱</span><span>🧱</span><strong>🤖</strong></div>
+    </section>
+
+    <section class="panel setup" id="setup">
+      <h2>🎯 اختار مشروعك</h2>
+      <label>حجم المشروع</label>
+      <div class="sizes">
+        <button class="size active" data-size="صغير">🧩 <b>صغير</b><small>سهل وسريع</small></button>
+        <button class="size" data-size="متوسط">🏗️ <b>متوسط</b><small>تفاصيل أكثر</small></button>
+        <button class="size" data-size="كبير">🏰 <b>كبير</b><small>تحدي ممتع</small></button>
+      </div>
+      <label for="idea">عايز تبني إيه؟ (اختياري)</label>
+      <input id="idea" placeholder="مثلاً: سبايدر مان، عربية، بيت..." maxlength="180">
+      <label for="inventory">إيه القطع اللي معاك؟ (اختياري)</label>
+      <textarea id="inventory" rows="2" placeholder="مثلاً: طوب أحمر 2×4، قطع سوداء صغيرة..."></textarea>
+      <button id="start" class="primary">🚀 ابدأ البناء</button>
+    </section>
+
+    <section class="panel work hidden" id="work">
+      <div class="work-head"><div><span class="eyebrow">مشروعك الحالي</span><h2 id="projectTitle">مشروع ليجو</h2></div><button id="newProject" class="ghost">مشروع جديد</button></div>
+      <div class="step-card">
+        <div class="step-label"><span>الخطوة الحالية</span><b id="stepNumber">1</b></div>
+        <div id="answer" class="answer">هنا هتظهر تعليمات التركيب.</div>
+      </div>
+      <div class="actions">
+        <button id="done" class="primary">✅ تم</button>
+        <button id="piece" class="action">❌ مش معايا القطعة</button>
+        <button id="color" class="action">🎨 مش معايا اللون</button>
+        <button id="explain" class="action">❓ مش فاهم</button>
+      </div>
+      <div class="photo-box">
+        <div><b>📸 تصوير للتأكيد</b><small>صوّر التركيب أو اختار صورة من جهازك.</small></div>
+        <input type="file" id="photo" accept="image/png,image/jpeg,image/webp" capture="environment">
+        <button id="review" class="secondary">راجع الصورة بالذكاء الاصطناعي</button>
+      </div>
+    </section>
+
+    <div id="notice" class="notice" role="status"></div>
+    <footer>صُنع بحب لعشاق الليجو ❤️ <span>LEGO AI</span></footer>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
